@@ -45,7 +45,7 @@ int p_value_test(const int n_experiments = 1e4)
   // Estimate the ndf for this fit
   const int ibin0 = h->FindBin(xmin);
   const int ibin1 = h->FindBin(xmax);
-  const int expc_ndf = ibin1 - ibin0 + 1 - 3;
+  const int expc_ndf = ibin1 - ibin0 - 3;
   printf("Expected number of degrees of freedom: %i\n", expc_ndf);
 
   // Create histograms to store the fit parameters
